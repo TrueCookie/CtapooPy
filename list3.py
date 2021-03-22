@@ -27,7 +27,7 @@ def app_marker(i, j, flag1, flag2):
     return i, j
 
 
-def print_snail(n):
+def create_snail(n):
     list0 = [[0 for j in range(n)] for i in range(n)]
     i = 0
     j = 0
@@ -54,14 +54,17 @@ def print_snail(n):
             (flag1, flag2) = app_flag(flag1, flag2)
             (i, j) = app_marker(i, j, flag1, flag2)
 
+    return list0
 
-# def print_table(slist):
-#     for x in slist:
-#         print()
 
-# n = 5  # int(input())
-# rows, cols = (n, n)
-# my_list = [[j for j in range(n)] for i in range(n)]
-# print(my_list)
+def print_table(dlist):
+    for i in dlist:
+        for j in i:
+            fixed = "{0: >5}".format(j.__str__())
+            print(fixed, end='')
+        print('\n')
 
-print_snail(4)
+
+n = int(input())
+snail_list = create_snail(n)
+print_table(snail_list)

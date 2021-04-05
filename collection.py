@@ -1,9 +1,12 @@
-tup = tuple
+def tuptup():
+    tup = tuple()
 
-for s in input():
-    if tup.__contains__(tup, s):
-        print("Yes")
-    else:
-        print("No")
-    tup.__add__(tup, s)
+    for s in input():
+        if tup.__contains__(s):
+            print("Yes")
+        else:
+            print("No")
+        tup.__put__(s)
 
+
+tuptup()

@@ -1,3 +1,5 @@
+# 2.2
+
 def int_list_input():
     d = input('Введите числа ')
     s = d.split()
@@ -19,4 +21,7 @@ a = int_list_input()
 n = input('Введите число ')
 result = indexes(a, n)
 
-print(result)
+if len(result) == 0:
+    print('Отсутствует')
+else:
+    print(result)
